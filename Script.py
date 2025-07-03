@@ -271,7 +271,7 @@ Nᴀᴍᴇ : {}
 
 ᴡᴀɴᴛᴇᴅ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : <b>{}</b>"""
     
-    CAPTION = """<b>📂 NAME: {filename}</b>\n\n<b>×͜×  ᴊᴏɪɴ ꜰᴏʀ ᴍᴏʀᴇ:- @Filmy_Fusion01</b>"""
+    CAPTION = """<b>📂 NAME {file_name}</b>\n\n<b>×͜×  ᴊᴏɪɴ ꜰᴏʀ ᴍᴏʀᴇ:- @Filmy_Fusion01</b>"""
 
     IMDB_TEMPLATE_TXT = """
 <b>🏷 Title</b>: <a href={url}>{title}</a>
