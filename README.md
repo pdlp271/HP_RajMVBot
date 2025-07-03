@@ -1,4 +1,4 @@
-<p align="center"> <img src="https://github.com/MrRaazz/Pics/blob/main/deenu.jpg"> </p>
+<p align="center"> <img src="https://graph.org/file/668d15e025801c44a0165-9a846f0aa59c6ac2cf.jpg"> </p>
 <h1 align="center"> 𝑫𝒆𝒆𝒏𝒅𝒂𝒚𝒂𝒍_𝒅𝒉𝒂𝒌𝒂𝒅 </h1>
 
 ### 🔥 [Check Out the Upgraded Version](https://github.com/MrRaazz/Dreamcinezone.git)
