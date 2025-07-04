@@ -1,5 +1,5 @@
 <p align="center"> <img src="https://graph.org/file/668d15e025801c44a0165-9a846f0aa59c6ac2cf.jpg"> </p>
-<h1 align="center"> 𝑫𝒆𝒆𝒏𝒅𝒂𝒚𝒂𝒍_𝒅𝒉𝒂𝒌𝒂𝒅 </h1>
+<h1 align="center"> 𝐇𝐏_𝐑𝐚𝐣 𝐁𝐨𝐭𝐬 </h1>
 
 ### 🔥 [Check Out the Upgraded Version](https://github.com/MrRaazz/Dreamcinezone.git)
 
@@ -7,11 +7,11 @@
 <!-- > ## ⚠ <u>Under Maintenance</u> ⚠  
 > This repository is currently under maintenance. Please **DO NOT deploy** until further notice. -->
 
-* [![Contact Developer](https://img.shields.io/static/v1?label=Contact+Developer&message=On+Telegram&color=critical)](https://t.me/Deendayal_Support_Group)
+* [![Contact Developer](https://img.shields.io/static/v1?label=Contact+Developer&message=On+Telegram&color=critical)](https://t.me/Filmy_Fusion01)
 
 First Check our **Demo** bot -
 
-[![Click Here](https://img.shields.io/badge/Demo%20Bot-Click%20Here-blue?style=flat&logo=telegram&labelColor=white&link=https://t.me/Princess_V4_bot)](https://t.me/Princess_V4_bot)
+[![Click Here](https://img.shields.io/badge/Demo%20Bot-Click%20Here-blue?style=flat&logo=telegram&labelColor=white&link=https://t.me/HP_RajMVBot)](https://t.me/HP_RajMVBot)
 
 ## Special Thanks To
 
@@ -29,7 +29,7 @@ First Check our **Demo** bot -
 
 If you encounter any issues **Deploying** the bot, feel free to seek assistance in our **support group**:
 
-[![Join Support Group    ](https://img.shields.io/badge/Join%20Support%20Group-Click%20Here-blue?style=flat&logo=telegram&labelColor=white&link=https://t.me/Deendayal_Support_Group)](https://t.me/Deendayal_Support_Group)
+[![Join Support Group    ](https://img.shields.io/badge/Join%20Support%20Group-Click%20Here-blue?style=flat&logo=telegram&labelColor=white&link=https://t.me/Filmy_Fusion01)](https://t.me/Filmy_Fusion01)
 
 #𝑫𝒐𝒖𝒃𝒍𝒆 𝑫𝑩 𝒔𝒖𝒑𝒑𝒐𝒓𝒕
 
