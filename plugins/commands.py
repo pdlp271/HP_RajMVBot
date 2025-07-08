@@ -35,9 +35,9 @@ async def start(client, message):
         await message.react(emoji=random.choice(REACTIONS), big=True) 
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [[
-                    InlineKeyboardButton('❤️ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ❤️', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                    InlineKeyboardButton('• ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ •', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('🍁 Update Channel 🍁', url=CHNL_LNK)
+                    InlineKeyboardButton('• ᴜᴩᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ •', url=CHNL_LNK)
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply(script.GSTART_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup, disable_web_page_preview=True)
@@ -52,13 +52,13 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-                    InlineKeyboardButton('🔰 ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ 🔰', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true')
+                    InlineKeyboardButton('⭕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⭕', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('ᴛᴏᴘ sᴇᴀʀᴄʜɪɴɢ ⭐', callback_data="topsearch"),
-                    InlineKeyboardButton(' ʜᴇʟᴘ 📢', callback_data='help'),
+                    InlineKeyboardButton('• ᴍᴏᴠɪᴇꜱ ɢʀᴏᴜᴩ •', url=f'https://t.me/+DWu_QXl2Ydg3N2Zl'),
+                    InlineKeyboardButton('• ʜᴇʟᴘ •', callback_data='help'),
                 ],[
-                    InlineKeyboardButton(' ᴀʙᴏᴜᴛ 📖', callback_data='about'),
-                    InlineKeyboardButton('ᴇᴀʀɴ ᴍᴏɴᴇʏ..💵', callback_data="shortlink_info")
+                    InlineKeyboardButton('• ᴀʙᴏᴜᴛ •', callback_data='about'),
+                    InlineKeyboardButton('• ᴇᴀʀɴ ᴍᴏɴᴇʏ •', callback_data="shortlink_info")
                 ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         current_time = datetime.now(pytz.timezone(TIMEZONE))
@@ -84,13 +84,13 @@ async def start(client, message):
 
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-                    InlineKeyboardButton('🔰 ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ 🔰', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true')
+                    InlineKeyboardButton('⭕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⭕', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('ᴛᴏᴘ sᴇᴀʀᴄʜɪɴɢ ⭐', callback_data="topsearch"),
-                    InlineKeyboardButton(' ʜᴇʟᴘ 📢', callback_data='help'),
+                    InlineKeyboardButton('• ᴍᴏᴠɪᴇꜱ ɢʀᴏᴜᴩ •', url=f'https://t.me/+DWu_QXl2Ydg3N2Zl'),
+                    InlineKeyboardButton('• ʜᴇʟᴘ •', callback_data='help'),
                 ],[
-                    InlineKeyboardButton(' ᴀʙᴏᴜᴛ 📖', callback_data='about'),
-                    InlineKeyboardButton('ᴇᴀʀɴ ᴍᴏɴᴇʏ..💵', callback_data="shortlink_info")
+                    InlineKeyboardButton('• ᴀʙᴏᴜᴛ •', callback_data='about'),
+                    InlineKeyboardButton('• ᴇᴀʀɴ ᴍᴏɴᴇʏ •', callback_data="shortlink_info")
                 ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         current_time = datetime.now(pytz.timezone(TIMEZONE))
@@ -183,12 +183,9 @@ async def start(client, message):
                 reply_markup = InlineKeyboardMarkup(btn)
                 caption = (
                     f"👋 Hello {message.from_user.mention}\n\n"
-                    "You have not joined all our *Updates Channels* yet.\n"
-                    "Please click the *Join Updates Channels* buttons below and ensure that you join *all* the listed channels.\n"
-                    "After that, please try again.\n\n"
-                    "आपने हमारे *सभी Updates Channels* को जॉइन नहीं किया है।\n"
-                    "कृपया *Join Updates Channels* बटन पर क्लिक करें और सुनिश्चित करें कि आपने *सभी चैनल्स* को जॉइन किया है।\n"
-                    "इसके बाद, कृपया फिर से प्रयास करें।"
+                    "🤷 ʏᴏᴜ ᴅᴏ ɴᴏᴛ ᴊᴏɪɴ ᴍʏ ᴄʜᴀɴɴᴇʟꜱ.ꜰɪʀꜱᴛ ᴊᴏɪɴ ᴍʏ ᴄʜᴀɴɴᴇʟꜱ ᴛʜᴇɴ ᴄʟɪᴄᴋ 'ᴛʀʏ ᴀɢᴀɪɴ' ʙᴜᴛᴛᴏɴ\n"
+                    "🤷 ನೀವು ನಮ್ಮ ʙᴀᴄᴋᴜᴩ ಚಾನೆಲ್ಗೆ ಜಾಯಿನ್ ಆಗಿಲ್ಲ. ಮೊದಲು ನಮ್ಮ ಚಾನೆಲ್ಗಳಿಗೆ ಜಾಯಿನ್ ಆಗಿ 'ᴛʀʏ ᴀɢᴀɪɴ' ಬಟನ್ ಕ್ಲಿಕ್ ಮಾಡಿ"
+                    
                 )
                 await message.reply_photo(
                     photo=random.choice(FSUB_PICS),
@@ -373,9 +370,9 @@ async def start(client, message):
         k = await client.send_message(chat_id=message.from_user.id,text=f"🫂 ʜᴇʏ {message.from_user.mention}, {gtxt}\n\n‼️ ɢᴇᴛ ᴀʟʟ ꜰɪʟᴇꜱ ɪɴ ᴀ ꜱɪɴɢʟᴇ ʟɪɴᴋ ‼️\n\n✅ ʏᴏᴜʀ ʟɪɴᴋ ɪꜱ ʀᴇᴀᴅʏ, ᴋɪɴᴅʟʏ ᴄʟɪᴄᴋ ᴏɴ ᴅᴏᴡɴʟᴏᴀᴅ ʙᴜᴛᴛᴏɴ.\n\n<u>⚠️ ɴᴏᴛᴇ :- ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ɪꜱ ᴅᴇʟᴇᴛᴇᴅ ɪɴ 5 ᴍɪɴᴜᴛᴇꜱ ᴛᴏ ᴀᴠᴏɪᴅ ᴄᴏᴘʏʀɪɢʜᴛ..ꜱᴀᴠᴇ ᴛʜɪꜱ ʟɪɴᴋ ᴛᴏ ꜱᴏᴍᴇᴡʜᴇʀᴇ ᴇʟꜱᴇ</u>", reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton('📁 ᴅᴏᴡɴʟᴏᴀᴅ 📁', url=g)
+                        InlineKeyboardButton('🔰 ᴅᴏᴡɴʟᴏᴀᴅ 🔰', url=g)
                     ], [
-                        InlineKeyboardButton('⚡ ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ⚡', url=await get_tutorial(chat_id))
+                        InlineKeyboardButton('⭕ ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ⭕', url=await get_tutorial(chat_id))
                     ]
                 ]
             )
@@ -406,9 +403,9 @@ async def start(client, message):
             k = await client.send_message(chat_id=user_id,text=f"🫂 ʜᴇʏ {message.from_user.mention}, {gtxt}\n\n✅ ʏᴏᴜʀ ʟɪɴᴋ ɪꜱ ʀᴇᴀᴅʏ, ᴋɪɴᴅʟʏ ᴄʟɪᴄᴋ ᴏɴ ᴅᴏᴡɴʟᴏᴀᴅ ʙᴜᴛᴛᴏɴ.\n\n⚠️ ꜰɪʟᴇ ɴᴀᴍᴇ : <code>{files.file_name}</code> \n\n📥 ꜰɪʟᴇ ꜱɪᴢᴇ : <code>{get_size(files.file_size)}</code>\n\n<u>⚠️ ɴᴏᴛᴇ :- ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ɪꜱ ᴅᴇʟᴇᴛᴇᴅ ɪɴ 10 ᴍɪɴᴜᴛᴇꜱ ᴛᴏ ᴀᴠᴏɪᴅ ᴄᴏᴘʏʀɪɢʜᴛ..ꜱᴀᴠᴇ ᴛʜɪꜱ ʟɪɴᴋ ᴛᴏ ꜱᴏᴍᴇᴡʜᴇʀᴇ ᴇʟꜱᴇ</u>", reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton('📁 ᴅᴏᴡɴʟᴏᴀᴅ 📁', url=g)
+                            InlineKeyboardButton('🔰 ᴅᴏᴡɴʟᴏᴀᴅ 🔰', url=g)
                         ], [
-                            InlineKeyboardButton('⚡ ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ⚡', url=await get_tutorial(chat_id))
+                            InlineKeyboardButton('⭕ ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ⭕', url=await get_tutorial(chat_id))
                         ]
                     ]
                 )
@@ -443,9 +440,9 @@ async def start(client, message):
             else:
                 if not await check_verification(client, message.from_user.id) and VERIFY == True:
                     btn = [[
-                       InlineKeyboardButton("✅ Cʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴠᴇʀɪғʏ ✅", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id))
+                       InlineKeyboardButton("♂️ Cʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴠᴇʀɪғʏ ♂️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id))
                        ],[
-                       InlineKeyboardButton("⚡ Hᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ⚡", url=HOW_TO_VERIFY)
+                       InlineKeyboardButton("⭕ Hᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ⭕", url=HOW_TO_VERIFY)
                    ]]
                     l = await message.reply_text(
                         text=f"<b>♨️ YOU ARE NOT VERIFIED !\nKINDLY VERIFY TO CONTINUE & YOU CAN GET UNLIMITED ACCESS FOR {DEENDAYAL_VERIFY_EXPIRE} HOURS ✅\n\n<blockquote>⚜️ इस BOT से MOVIE प्राप्त करने के लिए आपको VERIFY करना आवश्यक है VERIFY करने के बाद आप {DEENDAYAL_VERIFY_EXPIRE} घंटे तक UNLIMITED MOVIES प्राप्त कर सकते हो।</blockquote>\n\n<blockquote>🔥 अगर आप VERIFY नहीं करना चाहते तो आप PREMIUM ले सकते हो, PREMIUM लेने के बाद आप UNLIMITED MOVIES प्राप्त कर पाओगे और आपको VERIFY करने कोई जरूरत नहीं है\n\nPLAN DETAILS के लिए CLICK करें /plan</blockquote></b>",
@@ -503,9 +500,9 @@ async def start(client, message):
             k = await client.send_message(chat_id=message.from_user.id,text=f"🫂 ʜᴇʏ {message.from_user.mention}, {gtxt}\n\n✅ ʏᴏᴜʀ ʟɪɴᴋ ɪꜱ ʀᴇᴀᴅʏ, ᴋɪɴᴅʟʏ ᴄʟɪᴄᴋ ᴏɴ ᴅᴏᴡɴʟᴏᴀᴅ ʙᴜᴛᴛᴏɴ.\n\n⚠️ ꜰɪʟᴇ ɴᴀᴍᴇ : <code>{files.file_name}</code> \n\n📥 ꜰɪʟᴇ ꜱɪᴢᴇ : <code>{get_size(files.file_size)}</code>\n\n", reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton('📁 ᴅᴏᴡɴʟᴏᴀᴅ 📁', url=g)
+                            InlineKeyboardButton('🔰 ᴅᴏᴡɴʟᴏᴀᴅ 🔰', url=g)
                         ], [
-                            InlineKeyboardButton('⚡ ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ⚡', url=await get_tutorial(chat_id))
+                            InlineKeyboardButton('⭕ ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ⭕', url=await get_tutorial(chat_id))
                         ]
                     ]
                 )
@@ -523,9 +520,9 @@ async def start(client, message):
             else:
                if not await check_verification(client, message.from_user.id) and VERIFY == True:
                    btn = [[
-                       InlineKeyboardButton("✅ Cʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴠᴇʀɪғʏ ✅", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id))
+                       InlineKeyboardButton("♂️ Cʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴠᴇʀɪғʏ ♂️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id))
                    ],[
-                        InlineKeyboardButton("⚡ Hᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ⚡", url=HOW_TO_VERIFY)
+                        InlineKeyboardButton("⭕ Hᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ⭕", url=HOW_TO_VERIFY)
                    ]]
                    l = await message.reply_text(
                        text=f"<b>♨️ YOU ARE NOT VERIFIED !\nKINDLY VERIFY TO CONTINUE & YOU CAN GET UNLIMITED ACCESS FOR {DEENDAYAL_VERIFY_EXPIRE} HOURS ✅\n\n<blockquote>⚜️ इस BOT से MOVIE प्राप्त करने के लिए आपको VERIFY करना आवश्यक है VERIFY करने के बाद आप {DEENDAYAL_VERIFY_EXPIRE} घंटे  तक UNLIMITED MOVIES प्राप्त कर सकते हो। <blockquote>\n\n<blockquote>🔥 अगर आप VERIFY नहीं करना चाहते तो आप PREMIUM ले सकते हो, PREMIUM लेने के बाद आप UNLIMITED MOVIES प्राप्त कर पाओगे और आपको VERIFY करने कोई जरूरत नही है\n\nPLAN DETAILS के लिए CLICK करें /plan</blockquote></b>",
@@ -600,9 +597,9 @@ async def start(client, message):
     else:
         if not await check_verification(client, message.from_user.id) and VERIFY == True:
             btn = [[
-              InlineKeyboardButton("✅ Cʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴠᴇʀɪғʏ ✅", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id))
+              InlineKeyboardButton("♂️ Cʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴠᴇʀɪғʏ ♂️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id))
            ],[
-              InlineKeyboardButton("⚡ Hᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ⚡", url=HOW_TO_VERIFY)
+              InlineKeyboardButton("⭕ Hᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ⭕", url=HOW_TO_VERIFY)
            ]]
             l = await message.reply_text(
                 text=f"<b>♨️ YOU ARE NOT VERIFIED !\nKINDLY VERIFY TO CONTINUE & YOU CAN GET UNLIMITED ACCESS FOR {DEENDAYAL_VERIFY_EXPIRE} HOURS ✅\n\n<blockquote>⚜️ इस BOT से MOVIE प्राप्त करने के लिए आपको VERIFY करना आवश्यक है VERIFY करने के बाद आप {DEENDAYAL_VERIFY_EXPIRE}  घंटे  तक UNLIMITED MOVIES प्राप्त कर सकते हो।</blockquote> \n\n<blockquote>🔥 अगर आप VERIFY नहीं करना चाहते तो आप PREMIUM ले सकते हो, PREMIUM लेने के बाद आप UNLIMITED MOVIES प्राप्त कर पाओगे और आपको VERIFY करने कोई जरूरत नहीं है\n\nPLAN DETAILS के लिए CLICK करें /plan</blockquote></b>",
