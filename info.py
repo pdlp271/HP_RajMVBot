@@ -30,7 +30,7 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 
 PICS = (environ.get('PICS', 'https://graph.org/file/cda536d7a86c25eb41fd0-576bb11b1cc70ef5ea.jpg https://graph.org/file/5ef13477e361c3fa38e87-a77f341e95d44f6b79.jpg https://graph.org/file/7eff7aba3e785a7108e24-d243d62351cc996726.jpg https://graph.org/file/8689b5c888cb5ab0d751f-d90b6fc08fa22ae56e.jpg')).split()  # Sample pic
 NOR_IMG = environ.get("NOR_IMG", "https://graph.org/file/e20b5fdaf217252964202.jpg")
-MELCOW_VID = environ.get("MELCOW_VID", "https://graph.org/file/60e8a622b14796e4448ce.mp4")
+MELCOW_VID = environ.get("MELCOW_VID", "https://graph.org/file/819dd1a293d5fea054e07-d509d6c5c97bab7fe9.jpg")
 SPELL_IMG = environ.get("SPELL_IMG", "https://graph.org/file/13702ae26fb05df52667c.jpg")
 SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://graph.org/file/242b7f1b52743938d81f1.jpg'))
 FSUB_PICS = (environ.get('FSUB_PICS', 'https://graph.org/file/7478ff3eac37f4329c3d8.jpg https://graph.org/file/56b5deb73f3b132e2bb73.jpg')).split()  # Fsub pic
@@ -46,7 +46,7 @@ DEENDAYAL_MOVIE_UPDATE_CHANNEL = int(environ.get('DEENDAYAL_MOVIE_UPDATE_CHANNEL
 PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1002701898228'))  # Premium logs channel id
 auth_channel = environ.get('AUTH_CHANNEL', '-1002647662043')  # Channel/Group ID for force sub (make sure bot is admin)
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1002241178189').split()]
-support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1004626170145')  # Support group id (make sure bot is admin)
+support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1002896067356')  # Support group id (make sure bot is admin)
 reqst_channel = environ.get('REQST_CHANNEL_ID', '-1002701898228')  # Request channel id (make sure bot is admin)
 AUTH_CHANNEL = [int(fch) if id_pattern.search(fch) else fch for fch in environ.get('AUTH_CHANNEL', '-1002647662043').split()]
 MULTI_FSUB = [int(channel_id) for channel_id in environ.get('MULTI_FSUB', '-1002647662043').split() if re.match(r'^-?\d+$', channel_id)]  # Channel for force sub (make sure bot is admin)
@@ -151,7 +151,7 @@ SEASONS = ["season 1" , "season 2" , "season 3" , "season 4", "season 5" , "seas
 # Server & Web Configuration
 # ============================
 
-STREAM_MODE = bool(environ.get('STREAM_MODE', False)) # Set Stream mode True or False
+STREAM_MODE = bool(environ.get('STREAM_MODE', True)) # Set Stream mode True or False
 
 NO_PORT = bool(environ.get('NO_PORT', False))
 APP_NAME = None
