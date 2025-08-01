@@ -183,8 +183,8 @@ async def start(client, message):
                 reply_markup = InlineKeyboardMarkup(btn)
                 caption = (
                     f"👋 Hello {message.from_user.mention}\n\n"
-                    "ʏᴏᴜ ʜᴀᴠᴇ ɴᴏᴛ ᴊᴏɪɴᴇᴅ ᴏᴜʀ 'ʙᴀᴄᴋᴜᴩ' ᴄʜᴀɴɴᴇʟ ᴩʟᴇᴀꜱᴇ ᴊᴏɪɴ ᴏᴜʀ 'ʙᴀᴄᴋᴜᴩ' ᴄʜᴀɴɴᴇʟ ᴀɴᴅ ᴄʟɪᴄᴋ 'ᴛʀʏ ᴀɢᴀɪɴ' ʙᴜᴛᴛᴏɴ \n\n"
-                    "ದಯವಿಟ್ಟು ನಮ್ಮ BACKUP ಜಾಯಿನ್ ಆಗಿ ಮತ್ತು Try again ಬಟನ್ ಕ್ಲಿಕ್ ಮಾಡಿ"
+                    "ʏᴏᴜ ʜᴀᴠᴇ ɴᴏᴛ ᴊᴏɪɴᴇᴅ ᴏᴜʀ 'ʙᴀᴄᴋᴜᴩ' ᴄʜᴀɴɴᴇʟꜱ ᴩʟᴇᴀꜱᴇ ᴊᴏɪɴ ᴏᴜʀ 'ʙᴀᴄᴋᴜᴩ' ᴄʜᴀɴɴᴇʟꜱ ᴀɴᴅ ᴄʟɪᴄᴋ 'ᴛʀʏ ᴀɢᴀɪɴ' ʙᴜᴛᴛᴏɴ ᴀɴᴅ ɢᴇᴛ ʏᴏᴜʀ ꜰɪʟᴇꜱ\n\n"
+                    "ಕೆಳಗೆ ಕಾಣುವ ನಮ್ಮ BACKUP ಚಾನೆಲ್ಗೆ ಜಾಯಿನ್ ಆಗಿ ಮತ್ತು Try again ಬಟನ್ ಕ್ಲಿಕ್ ಮಾಡಿ ಫೈಲ್ ಪಡೆಯಿರಿ."
                     
                 )
                 await message.reply_photo(
