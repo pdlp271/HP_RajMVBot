@@ -28,12 +28,12 @@ BOT_TOKEN = environ.get('BOT_TOKEN', "")
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 
-PICS = (environ.get('PICS', 'https://graph.org/file/cda536d7a86c25eb41fd0-576bb11b1cc70ef5ea.jpg https://graph.org/file/5ef13477e361c3fa38e87-a77f341e95d44f6b79.jpg https://graph.org/file/7eff7aba3e785a7108e24-d243d62351cc996726.jpg https://graph.org/file/8689b5c888cb5ab0d751f-d90b6fc08fa22ae56e.jpg')).split()  # Sample pic
+PICS = (environ.get('PICS', 'https://i.ibb.co/v4ZnyY76/photo-2025-08-01-18-35-31-7533687634380455952.jpg https://i.ibb.co/YFrnxkP1/photo-2025-08-01-18-23-02-7533684408860016644.jpg')).split()  # Sample pic
 NOR_IMG = environ.get("NOR_IMG", "https://graph.org/file/e20b5fdaf217252964202.jpg")
-MELCOW_VID = environ.get("MELCOW_VID", "https://graph.org/file/819dd1a293d5fea054e07-d509d6c5c97bab7fe9.jpg")
+MELCOW_VID = environ.get("MELCOW_VID", "https://i.ibb.co/5qhPhRy/photo-2025-08-01-18-34-19-7533687312257908752.jpg")
 SPELL_IMG = environ.get("SPELL_IMG", "https://graph.org/file/13702ae26fb05df52667c.jpg")
 SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://graph.org/file/242b7f1b52743938d81f1.jpg'))
-FSUB_PICS = (environ.get('FSUB_PICS', 'https://graph.org/file/7478ff3eac37f4329c3d8.jpg https://graph.org/file/56b5deb73f3b132e2bb73.jpg')).split()  # Fsub pic
+FSUB_PICS = (environ.get('FSUB_PICS', 'https://graph.org/file/7478ff3eac37f4329c3d8.jpg ')).split()  # Fsub pic
 
 # ============================
 # Admin, Channels & Users Configuration
