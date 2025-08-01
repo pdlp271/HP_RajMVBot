@@ -271,7 +271,7 @@ Nᴀᴍᴇ : {}
 
 ᴡᴀɴᴛᴇᴅ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : <b>{}</b>"""
     
-    CAPTION = """<b>📂 NAME : {file_name}</b>\n\ɴ🔅 Language : #{language}\n\n<b>×͜×  ᴊᴏɪɴ ꜰᴏʀ ᴍᴏʀᴇ :- @HP_Raj_MOVIES</b>"""
+    CAPTION = """<b>📂 NAME : {file_name}</b>\n\n<b>×͜×  ᴊᴏɪɴ ꜰᴏʀ ᴍᴏʀᴇ :- @HP_Raj_MOVIES</b>"""
 
     IMDB_TEMPLATE_TXT = """
 <b>🏷 Title</b>: <a href={url}>{title}</a>
