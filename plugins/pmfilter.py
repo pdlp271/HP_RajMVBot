@@ -531,7 +531,7 @@ async def languages_cb_handler(client: Client, query: CallbackQuery):
     try:
         if int(query.from_user.id) not in [query.message.reply_to_message.from_user.id, 0]:
             return await query.answer(
-                f"⚠️ ʜᴇʟʟᴏ {query.from_user.first_name},\nʜᴇʏ ᴍɪꜱᴛᴇʀ ᴛʜɪꜱ ɪꜱ ɴᴏᴛ ʏᴏᴜʀ ᴍᴏᴠɪᴇ ʀᴇǫᴜᴇꜱᴛ,\nʀᴇǫᴜᴇꜱᴛ ʏᴏᴜʀ ꜱᴇʟꜰ... 😠😡",
+                f"⚠️ ʜᴇʟʟᴏ {query.from_user.first_name},\n ᴛʜɪꜱ ɪꜱ ɴᴏᴛ ʏᴏᴜʀ ᴍᴏᴠɪᴇ ʀᴇǫᴜᴇꜱᴛ,\nʀᴇǫᴜᴇꜱᴛ ʏᴏᴜʀ ꜱᴇʟꜰ... 😠😡",
                 show_alert=True,
             )
     except:
@@ -589,7 +589,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
     try:
         if int(query.from_user.id) not in [query.message.reply_to_message.from_user.id, 0]:
             return await query.answer(
-                f"⚠️ ʜᴇʟʟᴏ {query.from_user.first_name},\nʜᴇʏ ᴍɪꜱᴛᴇʀ ᴛʜɪꜱ ɪꜱ ɴᴏᴛ ʏᴏᴜʀ ᴍᴏᴠɪᴇ ʀᴇǫᴜᴇꜱᴛ,\nʀᴇǫᴜᴇꜱᴛ ʏᴏᴜʀ ꜱᴇʟꜰ... 😠😡",
+                f"⚠️ ʜᴇʟʟᴏ {query.from_user.first_name},\n ᴛʜɪꜱ ɪꜱ ɴᴏᴛ ʏᴏᴜʀ ᴍᴏᴠɪᴇ ʀᴇǫᴜᴇꜱᴛ,\nʀᴇǫᴜᴇꜱᴛ ʏᴏᴜʀ ꜱᴇʟꜰ... 😠😡",
                 show_alert=True,
             )
     except:
@@ -698,7 +698,7 @@ async def seasons_cb_handler(client: Client, query: CallbackQuery):
     try:
         if int(query.from_user.id) not in [query.message.reply_to_message.from_user.id, 0]:
             return await query.answer(
-                f"⚠️ ʜᴇʟʟᴏ {query.from_user.first_name},\nʜᴇʏ ᴍɪꜱᴛᴇʀ ᴛʜɪꜱ ɪꜱ ɴᴏᴛ ʏᴏᴜʀ ᴍᴏᴠɪᴇ ʀᴇǫᴜᴇꜱᴛ,\nʀᴇǫᴜᴇꜱᴛ ʏᴏᴜʀ ꜱᴇʟꜰ... 😠😡",
+                f"⚠️ ʜᴇʟʟᴏ {query.from_user.first_name},\nᴛʜɪꜱ ɪꜱ ɴᴏᴛ ʏᴏᴜʀ ᴍᴏᴠɪᴇ ʀᴇǫᴜᴇꜱᴛ,\nʀᴇǫᴜᴇꜱᴛ ʏᴏᴜʀ ꜱᴇʟꜰ... 😠😡",
                 show_alert=True,
             )
     except:
@@ -763,7 +763,7 @@ async def filter_seasons_cb_handler(client: Client, query: CallbackQuery):
     try:
         if int(query.from_user.id) not in [query.message.reply_to_message.from_user.id, 0]:
             return await query.answer(
-                f"⚠️ ʜᴇʟʟᴏ {query.from_user.first_name},\nʜᴇʏ ᴍɪꜱᴛᴇʀ ᴛʜɪꜱ ɪꜱ ɴᴏᴛ ʏᴏᴜʀ ᴍᴏᴠɪᴇ ʀᴇǫᴜᴇꜱᴛ,\nʀᴇǫᴜᴇꜱᴛ ʏᴏᴜʀ ꜱᴇʟꜰ... 😠😡",
+                f"⚠️ ʜᴇʟʟᴏ {query.from_user.first_name},\n ᴛʜɪꜱ ɪꜱ ɴᴏᴛ ʏᴏᴜʀ ᴍᴏᴠɪᴇ ʀᴇǫᴜᴇꜱᴛ,\nʀᴇǫᴜᴇꜱᴛ ʏᴏᴜʀ ꜱᴇʟꜰ... 😠😡",
                 show_alert=True,
             )
     except:
@@ -1640,18 +1640,18 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await xo.delete()
 
             await log_msg.reply_text(
-                text=f"•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜰʀᴏᴍ ɪᴅ {user_id} \n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username} \n\n•• 📁 ꜰɪʟᴇ ɴᴀᴍᴇ : {fileName}",
+                text=f"1) ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜰʀᴏᴍ ɪᴅ {user_id} \n2) ᴜꜱᴇʀɴᴀᴍᴇ : {username} \n\n3) 📁 ꜰɪʟᴇ ɴᴀᴍᴇ : {fileName}",
                 quote=True,
                 disable_web_page_preview=True,
-                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔻 Fast Download 🔻", url=lazy_download),  # we download Link
-                                                    InlineKeyboardButton('📺 Watch online 📺', url=lazy_stream)]])  # web stream Link
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("° Fast Download °", url=lazy_download),  # we download Link
+                                                    InlineKeyboardButton('° Watch online °', url=lazy_stream)]])  # web stream Link
             )
             Deendayal = await query.message.reply_text(
                 text="•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ☠︎⚔",
                 quote=True,
                 disable_web_page_preview=True,
-                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔻 Fast Download 🔻", url=lazy_download),  # we download Link
-                                                    InlineKeyboardButton('📺 Watch online 📺', url=lazy_stream)]])  # web stream Link
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("° Fast Download °", url=lazy_download),  # we download Link
+                                                    InlineKeyboardButton('° Watch online °', url=lazy_stream)]])  # web stream Link
             )  
             
             await asyncio.sleep(DELETE_TIME) 
