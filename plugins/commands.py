@@ -520,12 +520,12 @@ async def start(client, message):
             else:
                if not await check_verification(client, message.from_user.id) and VERIFY == True:
                    btn = [[
-                       InlineKeyboardButton("✅ Cʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴠᴇʀɪғʏ ✅", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id))
+                       InlineKeyboardButton("♻️ ᴠᴇʀɪғʏ ♻️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id))
                    ],[
                         InlineKeyboardButton("⚡ Hᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ⚡", url=HOW_TO_VERIFY)
                    ]]
                    l = await message.reply_text(
-                       text=f"<b>♨️ YOU ARE NOT VERIFIED !\nKINDLY VERIFY TO CONTINUE & YOU CAN GET UNLIMITED ACCESS FOR {DEENDAYAL_VERIFY_EXPIRE} HOURS ✅\n\n<blockquote>⚜️ ನೀವು Bot Use ಮಾಡಬೇಕು ಎಂದರೆ ನೀವು verify ಮಾಡಬೇಕಾಗುತ್ತದೆ. ನೀವು ಒಂದು ಬಾರಿ Verify ಆದರೆ {DEENDAYAL_VERIFY_EXPIRE} ಗಂಟೆಗಳತನಕ ಉಚಿತವಾಗಿ ಮತ್ತು Unlimited Files Download ಮಾಡಬವುದು<blockquote>\n\n<blockquote>🔥 ನೀವು Verify ಮಾಡುವುದಿಲ್ಲ ಎಂದರೆ ನೀವು Bot Premium ಕೋಟವನ್ನು ಪಡೆಯಿರಿ ಆಗ Verify ಅಗತ್ಯವಿರುವುದಿಲ್ಲ\n\nPLAN DETAILS ಗಳಿಗಾಗಿ CLICK ಮಾಡಿ /plan</blockquote></b>",
+                       text=f"<b>♨️  𝐘𝐎𝐔 𝐀𝐑𝐄 𝐍𝐎𝐓 𝐕𝐄𝐑𝐈𝐅𝐈𝐄𝐃 𝐓𝐎𝐃𝐀𝐘, ᴘʟᴇᴀꜱᴇ ᴄʟɪᴄᴋ ᴏɴ ᴠᴇʀɪғʏ & ɢᴇᴛ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇꜱꜱ ғᴏʀ ᴛɪʟʟ ɴᴇxᴛ {DEENDAYAL_VERIFY_EXPIRE} HOURS ✅\n\n<blockquote>⚜️ ನೀವು ಇಂದು Verified ಆಗಿಲ್ಲ. ಕೆಳಗೆ ಕಾಣುವ Verify Button Click ಮಾಡಿ Verify ಆಗಿ ಮತ್ತು ಮುಂದಿನ {DEENDAYAL_VERIFY_EXPIRE} ಗಂಟೆಗಳತನಕ ಉಚಿತವಾಗಿ ಮತ್ತು Unlimited Files Download ಮಾಡಿಕೊಳ್ಳಿ</blockquote>\n\nYOU NEED PLAN DETAILS ?.CLICK : /plan</b>",
                        protect_content=False,
                        reply_markup=InlineKeyboardMarkup(btn)
                    )
@@ -597,12 +597,13 @@ async def start(client, message):
     else:
         if not await check_verification(client, message.from_user.id) and VERIFY == True:
             btn = [[
-              InlineKeyboardButton("✅ Cʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴠᴇʀɪғʏ ✅", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id))
+              InlineKeyboardButton("♻️ ᴠᴇʀɪғʏ ♻️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id))
            ],[
               InlineKeyboardButton("⚡ Hᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ⚡", url=HOW_TO_VERIFY)
            ]]
             l = await message.reply_text(
-                text=f"<b>♨️ YOU ARE NOT VERIFIED !\nKINDLY VERIFY TO CONTINUE & YOU CAN GET UNLIMITED ACCESS FOR {DEENDAYAL_VERIFY_EXPIRE} HOURS ✅\n\n<blockquote>⚜️ इस BOT से MOVIE प्राप्त करने के लिए आपको VERIFY करना आवश्यक है VERIFY करने के बाद आप {DEENDAYAL_VERIFY_EXPIRE}  घंटे  तक UNLIMITED MOVIES प्राप्त कर सकते हो।</blockquote> \n\n<blockquote>🔥 अगर आप VERIFY नहीं करना चाहते तो आप PREMIUM ले सकते हो, PREMIUM लेने के बाद आप UNLIMITED MOVIES प्राप्त कर पाओगे और आपको VERIFY करने कोई जरूरत नहीं है\n\nPLAN DETAILS के लिए CLICK करें /plan</blockquote></b>",
+                text=f"<b>♨️  𝐘𝐎𝐔 𝐀𝐑𝐄 𝐍𝐎𝐓 𝐕𝐄𝐑𝐈𝐅𝐈𝐄𝐃 𝐓𝐎𝐃𝐀𝐘, ᴘʟᴇᴀꜱᴇ ᴄʟɪᴄᴋ ᴏɴ ᴠᴇʀɪғʏ & ɢᴇᴛ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇꜱꜱ ғᴏʀ ᴛɪʟʟ ɴᴇxᴛ {DEENDAYAL_VERIFY_EXPIRE} HOURS ✅\n\n<blockquote>⚜️ ನೀವು ಇಂದು Verified ಆಗಿಲ್ಲ. ಕೆಳಗೆ ಕಾಣುವ Verify Button Click ಮಾಡಿ Verify ಆಗಿ ಮತ್ತು ಮುಂದಿನ {DEENDAYAL_VERIFY_EXPIRE} ಗಂಟೆಗಳತನಕ ಉಚಿತವಾಗಿ ಮತ್ತು Unlimited Files Download ಮಾಡಿಕೊಳ್ಳಿ</blockquote>\n\nYOU NEED PLAN DETAILS ?.CLICK : /plan</b>",
+               
                 protect_content=False,
                 reply_markup=InlineKeyboardMarkup(btn)
             )
