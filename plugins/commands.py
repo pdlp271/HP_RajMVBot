@@ -331,7 +331,7 @@ async def start(client, message):
             ]]
             await message.reply_photo(
                 photo="https://graph.org/file/6928de1539e2e80e47fb8.jpg",
-                caption=f"<b>Hey {message.from_user.mention},\n\n𝑌𝑜𝑢 𝐴𝑟𝑒 𝑆𝑢𝑐𝑐𝑒𝑠𝑠𝑓𝑢𝑙 𝑉𝑒𝑟𝑖𝑓𝑖𝑒𝑑 ! 𝑁𝑜𝑤 𝑌𝑜𝑢 𝐻𝑎𝑣𝑒 𝑈𝑛𝑙𝑖𝑚𝑖𝑡𝑒𝑑 𝐴𝑐𝑐𝑒𝑠𝑠 𝐹𝑜𝑟 {DEENDAYAL_VERIFY_EXPIRE} HOURS.\n\n<blockquote> ನಿಮ್ಮ Verification ಯಶಸ್ವಿಯಾಗಿ. ಈಗ ನೀವು {DEENDAYAL_VERIFY_EXPIRE} ಗಂಟೆಗಳ ತನಕ Unlimited Files ತಗೊಬವುದು</blockquote></b>",
+                caption=f"<b>Hey {message.from_user.mention},\n\n𝑌𝑜𝑢 𝐴𝑟𝑒 𝑆𝑢𝑐𝑐𝑒𝑠𝑠𝑓𝑢𝑙 𝑉𝑒𝑟𝑖𝑓𝑖𝑒𝑑 ✅! 𝑁𝑜𝑤 𝑌𝑜𝑢 𝐻𝑎𝑣𝑒 𝑈𝑛𝑙𝑖𝑚𝑖𝑡𝑒𝑑 𝐴𝑐𝑐𝑒𝑠𝑠 𝐹𝑜𝑟 {DEENDAYAL_VERIFY_EXPIRE} HOURS.\n\n<blockquote> ನಿಮ್ಮ Verification ಯಶಸ್ವಿಯಾಗಿ ✅. ಈಗ ನೀವು {DEENDAYAL_VERIFY_EXPIRE} ಗಂಟೆಗಳ ತನಕ Unlimited Files ತಗೊಬವುದು</blockquote></b>",
                 reply_markup=InlineKeyboardMarkup(btn)
             )
             await verify_user(client, userid, token) 
@@ -388,7 +388,7 @@ async def start(client, message):
             gtxt = "ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ 👋" 
         elif curr_time < 17:
             gtxt = "ɢᴏᴏᴅ ᴀғᴛᴇʀɴᴏᴏɴ 👋" 
-        elif curr_time < 21:
+        eime < 21:
             gtxt = "ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ 👋"
         else:
             gtxt = "ɢᴏᴏᴅ ɴɪɢʜᴛ 👋"        
@@ -445,7 +445,7 @@ async def start(client, message):
                        InlineKeyboardButton("⚡ Hᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ⚡", url=HOW_TO_VERIFY)
                    ]]
                     l = await message.reply_text(
-                        text=f"<b>‼️ 𝗬𝗢𝗨 𝗔𝗥𝗘 𝗡𝗢𝗧 𝗩𝗘𝗥𝗜𝗙𝗜𝗘𝗗 𝗧𝗢𝗗𝗔𝗬 ‼️, !\nKINDLY VERIFY TO CONTINUE & YOU CAN GET UNLIMITED ACCESS FOR {DEENDAYAL_VERIFY_EXPIRE} HOURS ✅\n\n<blockquote>⚜️ ನೀವು Bot Use ಮಾಡಬೇಕು ಎಂದರೆ ನೀವು verify ಮಾಡಬೇಕಾಗುತ್ತದೆ. ನೀವು ಒಂದು ಬಾರಿ Verify ಆದರೆ {DEENDAYAL_VERIFY_EXPIRE} ಗಂಟೆಗಳತನಕ ಉಚಿತವಾಗಿ ಮತ್ತು Unlimited Files Download ಮಾಡಬವುದು</blockquote>\n\n<blockquote>🔥 ನೀವು Verify ಮಾಡುವುದಿಲ್ಲ ಎಂದರೆ ನೀವು ಬೊಟ್ Premium ಕೋಟವನ್ನು ಪಡೆಯಿರಿ ಆಗ Verify ಅಗತ್ಯವಿರುವುದಿಲ್ಲ \n\nPLAN DETAILS ಗಳಿಗಾಗಿ CLICK ಮಾಡಿ /plan</blockquote></b>",
+                        text=f"<b>‼️ 𝐘𝐎𝐔 𝐀𝐑𝐄 𝐍𝐎𝐓 𝐕𝐄𝐑𝐈𝐅𝐈𝐄𝐃 𝐓𝐎𝐃𝐀𝐘 ‼️,\n\n<u>ᴘʟᴇᴀꜱᴇ ᴄʟɪᴄᴋ ᴏɴ ᴠᴇʀɪғʏ ʙᴜᴛᴛᴏɴ & ɢᴇᴛ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇꜱꜱ ғᴏʀ ᴛɪʟʟ ɴᴇxᴛ {DEENDAYAL_VERIFY_EXPIRE} ʜᴏᴜʀꜱ ✅</u></b>",
                         protect_content=False,
                         reply_markup=InlineKeyboardMarkup(btn)
                     )
@@ -525,7 +525,7 @@ async def start(client, message):
                         InlineKeyboardButton("⚡ Hᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ⚡", url=HOW_TO_VERIFY)
                    ]]
                    l = await message.reply_text(
-                       text=f"<b>♨️  𝐘𝐎𝐔 𝐀𝐑𝐄 𝐍𝐎𝐓 𝐕𝐄𝐑𝐈𝐅𝐈𝐄𝐃 𝐓𝐎𝐃𝐀𝐘, ᴘʟᴇᴀꜱᴇ ᴄʟɪᴄᴋ ᴏɴ ᴠᴇʀɪғʏ & ɢᴇᴛ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇꜱꜱ ғᴏʀ ᴛɪʟʟ ɴᴇxᴛ {DEENDAYAL_VERIFY_EXPIRE} HOURS ✅\n\n<blockquote>⚜️ ನೀವು ಇಂದು Verified ಆಗಿಲ್ಲ. ಕೆಳಗೆ ಕಾಣುವ Verify Button Click ಮಾಡಿ Verify ಆಗಿ ಮತ್ತು ಮುಂದಿನ {DEENDAYAL_VERIFY_EXPIRE} ಗಂಟೆಗಳತನಕ ಉಚಿತವಾಗಿ ಮತ್ತು Unlimited Files Download ಮಾಡಿಕೊಳ್ಳಿ</blockquote>\n\nYOU NEED PLAN DETAILS ?.CLICK : /plan</b>",
+                       text=f"<b>‼️ 𝐘𝐎𝐔 𝐀𝐑𝐄 𝐍𝐎𝐓 𝐕𝐄𝐑𝐈𝐅𝐈𝐄𝐃 𝐓𝐎𝐃𝐀𝐘 ‼️,\n\n<u>ᴘʟᴇᴀꜱᴇ ᴄʟɪᴄᴋ ᴏɴ ᴠᴇʀɪғʏ ʙᴜᴛᴛᴏɴ & ɢᴇᴛ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇꜱꜱ ғᴏʀ ᴛɪʟʟ ɴᴇxᴛ {DEENDAYAL_VERIFY_EXPIRE} ʜᴏᴜʀꜱ ✅</u></b>",
                        protect_content=False,
                        reply_markup=InlineKeyboardMarkup(btn)
                    )
@@ -602,7 +602,7 @@ async def start(client, message):
               InlineKeyboardButton("⚡ Hᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ⚡", url=HOW_TO_VERIFY)
            ]]
             l = await message.reply_text(
-                text=f"<b>♨️  𝐘𝐎𝐔 𝐀𝐑𝐄 𝐍𝐎𝐓 𝐕𝐄𝐑𝐈𝐅𝐈𝐄𝐃 𝐓𝐎𝐃𝐀𝐘, ᴘʟᴇᴀꜱᴇ ᴄʟɪᴄᴋ ᴏɴ ᴠᴇʀɪғʏ & ɢᴇᴛ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇꜱꜱ ғᴏʀ ᴛɪʟʟ ɴᴇxᴛ {DEENDAYAL_VERIFY_EXPIRE} HOURS ✅\n\n<blockquote>⚜️ ನೀವು ಇಂದು Verified ಆಗಿಲ್ಲ. ಕೆಳಗೆ ಕಾಣುವ Verify Button Click ಮಾಡಿ Verify ಆಗಿ ಮತ್ತು ಮುಂದಿನ {DEENDAYAL_VERIFY_EXPIRE} ಗಂಟೆಗಳತನಕ ಉಚಿತವಾಗಿ ಮತ್ತು Unlimited Files Download ಮಾಡಿಕೊಳ್ಳಿ</blockquote>\n\nYOU NEED PLAN DETAILS ?.CLICK : /plan</b>",
+                text=f"<b>‼️ 𝐘𝐎𝐔 𝐀𝐑𝐄 𝐍𝐎𝐓 𝐕𝐄𝐑𝐈𝐅𝐈𝐄𝐃 𝐓𝐎𝐃𝐀𝐘 ‼️,\n\n<u>ᴘʟᴇᴀꜱᴇ ᴄʟɪᴄᴋ ᴏɴ ᴠᴇʀɪғʏ ʙᴜᴛᴛᴏɴ & ɢᴇᴛ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇꜱꜱ ғᴏʀ ᴛɪʟʟ ɴᴇxᴛ {DEENDAYAL_VERIFY_EXPIRE} ʜᴏᴜʀꜱ ✅</u></b>",
                
                 protect_content=False,
                 reply_markup=InlineKeyboardMarkup(btn)
