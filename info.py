@@ -84,11 +84,11 @@ HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', 'https://t.me/Howtoopenlink271/41')
 # ============================
 # Link Shortener Configuration
 # ============================
-IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', True))
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'zegalinks.com')
-SHORTLINK_API = environ.get('SHORTLINK_API', '1d933214e9afa52247c70d2cfbc8543f4b9b197f')
-TUTORIAL = environ.get('TUTORIAL', 'https://t.me/HowtoopenLink02/5')  # Tutorial video link for opening shortlink website
-IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
+IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', False))
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'softurl.in')
+SHORTLINK_API = environ.get('SHORTLINK_API', '160b3d1bc61d414342337049af02cc5e3eea1a69')
+TUTORIAL = environ.get('TUTORIAL', 'https://t.me/HowtoopenLink02/6')  # Tutorial video link for opening shortlink website
+IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', False))
 
 # ============================
 # Channel & Group Links Configuration
