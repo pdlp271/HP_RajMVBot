@@ -7,7 +7,7 @@ from pymongo.errors import DuplicateKeyError
 from umongo import Instance, Document, fields
 from motor.motor_asyncio import AsyncIOMotorClient
 from marshmallow.exceptions import ValidationError
-from info import CAPTION_LANGUAGES, DATABASE_URI, DATABASE_URI2, DATABASE_NAME, COLLECTION_NAME, USE_CAPTION_FILTER, MAX_B_TN, DEENDAYAL_MOVIE_UPDATE_CHANNEL, OWNERID
+from info import CAPTION_LANGUAGES, DATABASE_URI, DATABASE_URI2, DATABASE_NAME, COLLECTION_NAME, USE_CAPTION_FILTER, MAX_B_TN, DREAMCINEZONE_MOVIE_UPDATE_CHANNEL, OWNERID
 from utils import get_settings, save_group_settings, temp, get_status
 from database.users_chats_db import add_name
 from .Imdbposter import get_movie_details, fetch_image
@@ -276,11 +276,11 @@ async def send_msg(bot, filename, caption):
         for lang in possible_languages:
             if lang.lower() in caption.lower():
                 language += f"{lang}, "
-        language = language[:-2] if language else "I Don't Know 😄"
+        language = language[:-2] if language else "Not idea 😄"
 
         filename = re.sub(r"[\(\)\[\]\{\}:;'\-!]", "", filename)
 
-        text = "#𝐍𝐄𝐖_𝐅𝐈𝐋𝐄𝐒_𝐀𝐃𝐃𝐄𝐃 ✅\n\n📑 ᴛɪᴛʟᴇ : `{}`\n💢 Qᴜᴀʟɪᴛʏ : {}\n🍁 ʟᴀɴɢᴜᴀɢᴇ : {}\n⚡ ᴩᴏᴡᴇʀᴇᴅ ʙʏ : @HP_Raj_MOVIES\n\n♻️ Movie Link : <a href='https://t.me/{temp.U_NAME}?start=getfile-{filenames}'>👉𝐂𝐥𝐢𝐜𝐤 𝐇𝐞𝐫𝐞👈</a>"
+        text = "#𝑵𝒆𝒘_𝑭𝒊𝒍𝒆_𝑨𝒅𝒅𝒆𝒅 ✅\n\n👷𝑵𝒂𝒎𝒆: `{}`\n\n🌳𝑸𝒖𝒂𝒍𝒊𝒕𝒚: {}\n\n🍁𝑨𝒖𝒅𝒊𝒐: {}"
         text = text.format(filename, quality, language)
 
         if await add_name(OWNERID, filename):
@@ -293,12 +293,12 @@ async def send_msg(bot, filename, caption):
                     resized_poster = await fetch_image(poster_url)  
 
             filenames = filename.replace(" ", '-')
-            btn = [[InlineKeyboardButton('♻️ ɢᴇᴛ ꜰɪʟᴇꜱ ♻️', url=f"https://t.me/{temp.U_NAME}?start=getfile-{filenames}")]]
+            btn = [[InlineKeyboardButton('🌲 Get Files 🌲', url=f"https://telegram.me/{temp.U_NAME}?start=getfile-{filenames}")]]
             
             if resized_poster:
-                await bot.send_photo(chat_id=DEENDAYAL_MOVIE_UPDATE_CHANNEL, photo=resized_poster, caption=text, reply_markup=InlineKeyboardMarkup(btn))
+                await bot.send_photo(chat_id=DREAMCINEZONE_MOVIE_UPDATE_CHANNEL, photo=resized_poster, caption=text, reply_markup=InlineKeyboardMarkup(btn))
             else:              
-                await bot.send_message(chat_id=DEENDAYAL_MOVIE_UPDATE_CHANNEL, text=text, reply_markup=InlineKeyboardMarkup(btn))
+                await bot.send_message(chat_id=DREAMCINEZONE_MOVIE_UPDATE_CHANNEL, text=text, reply_markup=InlineKeyboardMarkup(btn))
 
     except:
         pass
@@ -310,193 +310,4 @@ async def get_qualities(text, qualities: list):
         if q in text:
             quality.append(q)
     quality = ", ".join(quality)
-    return quality[:-2] if quality.endswith(", ") else quality        )
-        files2 = await cursor2.to_list(length=remaining)
-        files = files1 + files2
-    else:
-        files = files1
-    next_offset = offset + len(files)
-    if next_offset >= total_results:
-        next_offset = ""
-    return files, next_offset, total_results
-
-
-async def get_bad_files(query, file_type=None):
-    query = query.strip()
-    if not query:
-        raw_pattern = '.'
-    elif ' ' not in query:
-        raw_pattern = r"(\b|[\.\+\-_])" + query + r"(\b|[\.\+\-_])"
-    else:
-        raw_pattern = query.replace(" ", r".*[\s\.\+\-_()]")
-    try:
-        regex = re.compile(raw_pattern, flags=re.IGNORECASE)
-    except:
-        return []
-    if USE_CAPTION_FILTER:
-        filter = {'$or': [{'file_name': regex}, {'caption': regex}]}
-    else:
-        filter = {'file_name': regex}
-    if file_type:
-        filter['file_type'] = file_type
-    cursor1 = Media.find(filter).sort('$natural', -1)
-    files1 = await cursor1.to_list(length=(await Media.count_documents(filter)))
-    if MULTIPLE_DB:
-        cursor2 = Media2.find(filter).sort('$natural', -1)
-        files2 = await cursor2.to_list(length=(await Media2.count_documents(filter)))
-        files = files1 + files2
-    else:
-        files = files1
-    total_results = len(files)
-    return files, total_results
-
-
-async def get_file_details(query):
-    filter = {"file_id": query}
-    cursor = Media.find(filter)
-    filedetails = await cursor.to_list(length=1)
-    if not filedetails:
-        cursor2 = Media2.find(filter)
-        filedetails = await cursor2.to_list(length=1)
-    return filedetails
-
-
-def encode_file_id(s: bytes) -> str:
-    r = b""
-    n = 0
-    for i in s + bytes([22]) + bytes([4]):
-        if i == 0:
-            n += 1
-        else:
-            if n:
-                r += b"\x00" + bytes([n])
-                n = 0
-
-            r += bytes([i])
-    return base64.urlsafe_b64encode(r).decode().rstrip("=")
-
-
-def encode_file_ref(file_ref: bytes) -> str:
-    return base64.urlsafe_b64encode(file_ref).decode().rstrip("=")
-
-
-def unpack_new_file_id(new_file_id):
-    """Return file_id, file_ref"""
-    decoded = FileId.decode(new_file_id)
-    file_id = encode_file_id(
-        pack(
-            "<iiqq",
-            int(decoded.file_type),
-            decoded.dc_id,
-            decoded.media_id,
-            decoded.access_hash,
-        )
-    )
-    file_ref = encode_file_ref(decoded.file_reference)
-    return file_id, file_ref
-
-
-async def dreamxbotz_fetch_media(limit: int) -> List[dict]:
-    try:
-        if MULTIPLE_DB:
-            db_size = await check_db_size(Media)
-            if db_size > 407:
-                cursor = Media2.find().sort("$natural", -1).limit(limit)
-                files = await cursor.to_list(length=limit)
-                return files
-        cursor = Media.find().sort("$natural", -1).limit(limit)
-        files = await cursor.to_list(length=limit)
-        return files
-    except Exception as e:
-        logger.error(f"Error in dreamxbotz_fetch_media: {e}")
-        return []
-
-
-async def dreamxbotz_clean_title(filename: str, is_series: bool = False) -> str:
-    try:
-        year_match = re.search(r"^(.*?(\d{4}|\(\d{4}\)))", filename, re.IGNORECASE)
-        if year_match:
-            title = year_match.group(1).replace("(", "").replace(")", "")
-            return (
-                re.sub(
-                    r"(?:@[^ \n\r\t.,:;!?()\[\]{}<>\\\/\"'=_%]+|[._\-\[\]@()]+)",
-                    " ",
-                    title,
-                )
-                .strip()
-                .title()
-            )
-        if is_series:
-            season_match = re.search(
-                r"(.*?)(?:S(\d{1,2})|Season\s*(\d+)|Season(\d+))(?:\s*Combined)?",
-                filename,
-                re.IGNORECASE,
-            )
-            if season_match:
-                title = season_match.group(1).strip()
-                season = (
-                    season_match.group(2)
-                    or season_match.group(3)
-                    or season_match.group(4)
-                )
-                title = (
-                    re.sub(
-                        r"(?:@[^ \n\r\t.,:;!?()\[\]{}<>\\\/\"'=_%]+|[._\-\[\]@()]+)",
-                        " ",
-                        title,
-                    )
-                    .strip()
-                    .title()
-                )
-                return f"{title} S{int(season):02}"
-        title = filename
-        return (
-            re.sub(
-                r"(?:@[^ \n\r\t.,:;!?()\[\]{}<>\\\/\"'=_%]+|[._\-\[\]@()]+)", " ", title
-            )
-            .strip()
-            .title()
-        )
-    except Exception as e:
-        logger.error(f"Error in truncate_title: {e}")
-        return filename
-
-
-async def dreamxbotz_get_movies(limit: int = 20) -> List[str]:
-    try:
-        cursor = await dreamxbotz_fetch_media(limit * 2)
-        results = set()
-        pattern = r"(?:s\d{1,2}|season\s*\d+|season\d+)(?:\s*combined)?(?:e\d{1,2}|episode\s*\d+)?\b"
-        for file in cursor:
-            file_name = getattr(file, "file_name", "")
-            if not re.search(pattern, file_name, re.IGNORECASE):
-                title = await dreamxbotz_clean_title(file_name)
-                results.add(title)
-            if len(results) >= limit:
-                break
-        return sorted(list(results))[:limit]
-    except Exception as e:
-        logger.error(f"Error in dreamxbotz_get_movies: {e}")
-        return []
-
-
-async def dreamxbotz_get_series(limit: int = 30) -> Dict[str, List[int]]:
-    try:
-        cursor = await dreamxbotz_fetch_media(limit * 5)
-        grouped = defaultdict(list)
-        pattern = r"(.*?)(?:S(\d{1,2})|Season\s*(\d+)|Season(\d+))(?:\s*Combined)?(?:E(\d{1,2})|Episode\s*(\d+))?\b"
-        for file in cursor:
-            file_name = getattr(file, "file_name", "")
-            match = re.search(pattern, file_name, re.IGNORECASE)
-            if match:
-                title = await dreamxbotz_clean_title(match.group(1), is_series=True)
-                season = int(match.group(2) or match.group(3) or match.group(4))
-                grouped[title].append(season)
-        return {
-            title: sorted(set(seasons))[:10]
-            for title, seasons in grouped.items()
-            if seasons
-        }
-    except Exception as e:
-        logger.error(f"Error in dreamxbotz_get_series: {e}")
-        return []
+    return quality[:-2] if quality.endswith(", ") else quality
