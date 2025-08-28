@@ -276,11 +276,11 @@ async def send_msg(bot, filename, caption):
         for lang in possible_languages:
             if lang.lower() in caption.lower():
                 language += f"{lang}, "
-        language = language[:-2] if language else "Not idea 😄"
+        language = language[:-2] if language else "I Don't Know 😄"
 
         filename = re.sub(r"[\(\)\[\]\{\}:;'\-!]", "", filename)
 
-        text = "#𝑵𝒆𝒘_𝑭𝒊𝒍𝒆_𝑨𝒅𝒅𝒆𝒅 ✅\n\n📑 ᴛɪᴛᴇʟ : `{}`\n\n🌳 Qᴜᴀʟɪᴛʏ : {}\n\n🍁 ʟᴀɴɢᴜᴀɢᴇ : {} \n\n⚡ ᴩᴏᴡᴇʀᴇᴅ ʙʏ : @HP_Raj_MOVIES"
+        text = "#𝑵𝒆𝒘_𝑭𝒊𝒍𝒆_𝑨𝒅𝒅𝒆𝒅 ✅\n\n📑 ᴛɪᴛᴇʟ : `{}`\n🌳 Qᴜᴀʟɪᴛʏ : {}\n🍁 ʟᴀɴɢᴜᴀɢᴇ : {} \n⚡ ᴩᴏᴡᴇʀᴇᴅ ʙʏ : @HP_Raj_MOVIES\n\n🎥 MOVIE LINK :  <a href='https://t.me/{temp.U_NAME}?start=getfile-{filenames}'>👉𝐂𝐋𝐈𝐂𝐊 𝐇𝐄𝐑𝐄👈</a>"
         text = text.format(filename, quality, language)
 
         if await add_name(OWNERID, filename):
@@ -293,7 +293,7 @@ async def send_msg(bot, filename, caption):
                     resized_poster = await fetch_image(poster_url)  
 
             filenames = filename.replace(" ", '-')
-            btn = [[InlineKeyboardButton('♻️ Get Files ♻️', url=f"https://t.me/{temp.U_NAME}?start=getfile-{filenames}")]]
+            btn = [[InlineKeyboardButton('♻️ ɢᴇᴛ ꜰɪʟᴇꜱ ♻️', url=f"https://t.me/{temp.U_NAME}?start=getfile-{filenames}")]]
             
             if resized_poster:
                 await bot.send_photo(chat_id=DEENDAYAL_MOVIE_UPDATE_CHANNEL, photo=resized_poster, caption=text, reply_markup=InlineKeyboardMarkup(btn))
