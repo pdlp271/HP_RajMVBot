@@ -37,7 +37,7 @@ async def start(client, message):
         buttons = [[
                     InlineKeyboardButton('❤️ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ❤️', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
-                    InlineKeyboardButton('🍁 Update Channel 🍁', url=CHNL_LNK)
+                    InlineKeyboardButton('🍁 ᴜᴩᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ 🍁', url=CHNL_LNK)
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply(script.GSTART_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup, disable_web_page_preview=True)
@@ -330,8 +330,8 @@ async def start(client, message):
                 InlineKeyboardButton("🏃..Bᴀᴄᴋ Tᴏ Gʀᴏᴜᴘ", url=GRP_LNK)
             ]]
             await message.reply_photo(
-                photo="https://graph.org/file/6928de1539e2e80e47fb8.jpg",
-                caption=f"<b>Hey {message.from_user.mention},\n\n𝑌𝑜𝑢 𝐴𝑟𝑒 𝑆𝑢𝑐𝑐𝑒𝑠𝑠𝑓𝑢𝑙 𝑉𝑒𝑟𝑖𝑓𝑖𝑒𝑑 ✅! 𝑁𝑜𝑤 𝑌𝑜𝑢 𝐻𝑎𝑣𝑒 𝑈𝑛𝑙𝑖𝑚𝑖𝑡𝑒𝑑 𝐴𝑐𝑐𝑒𝑠𝑠 𝐹𝑜𝑟 {DEENDAYAL_VERIFY_EXPIRE} HOURS.\n\n<blockquote> ನಿಮ್ಮ Verification ಯಶಸ್ವಿಯಾಗಿ ✅. ಈಗ ನೀವು {DEENDAYAL_VERIFY_EXPIRE} ಗಂಟೆಗಳ ತನಕ Unlimited Files ತಗೊಬವುದು</blockquote></b>",
+                photo="https://graph.org/file/c4cdc2d3524f6ef9df5ee-89c662967238373dcb.jpg",
+                caption=f"<b>👋 Hey {message.from_user.mention},\n\n✅ ʏᴏᴜʀ ɴᴇᴡ ᴛᴏᴋᴇɴ ɪs sᴜᴄᴄᴇssғᴜʟʟʏ ɢᴇɴᴇʀᴀᴛᴇᴅ.✅ \n Nᴏᴡ ʏᴏᴜ ᴄᴀɴ ᴜsᴇ ᴍᴇ ɪɴ ᴛʜᴇ ɴᴇxᴛ {DEENDAYAL_VERIFY_EXPIRE} ʜᴏᴜʀs.\n ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ʀᴇᴍᴏᴠᴇ ᴛᴏᴋᴇɴ ɢᴇɴᴇʀᴀᴛɪɴɢ ?. ᴋɪɴᴅʟʏ ʙᴜʏ ᴛʜᴇ ᴘʀᴇᴍɪᴜᴍ : /plan </b>",
                 reply_markup=InlineKeyboardMarkup(btn)
             )
             await verify_user(client, userid, token) 
@@ -350,7 +350,7 @@ async def start(client, message):
 
         else:
             return await message.reply_text(
-                text="<b>Invalid link or Expired link !</b>",
+                text="<b>Invalid Token or Expired Token !</b>",
                 protect_content=False
             )
     if data.startswith("sendfiles"):
@@ -440,12 +440,12 @@ async def start(client, message):
             else:
                 if not await check_verification(client, message.from_user.id) and VERIFY == True:
                     btn = [[
-                       InlineKeyboardButton("♻️ ᴠᴇʀɪғʏ ♻️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id))
+                       InlineKeyboardButton("♻️ ɢᴇɴᴇᴛᴀᴛ ᴛᴏᴋᴇɴ ♻️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id))
                        ],[
-                       InlineKeyboardButton("⚡ Hᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ⚡", url=HOW_TO_VERIFY)
+                       InlineKeyboardButton("⚡ Hᴏᴡ ᴛᴏ ɢᴇɴᴇᴛᴀᴛ ᴛᴏᴋᴇɴ ⚡", url=HOW_TO_VERIFY)
                    ]]
                     l = await message.reply_text(
-                        text=f"<b>‼️ 𝐘𝐎𝐔 𝐀𝐑𝐄 𝐍𝐎𝐓 𝐕𝐄𝐑𝐈𝐅𝐈𝐄𝐃 𝐓𝐎𝐃𝐀𝐘 ‼️,\n\n ᴘʟᴇᴀꜱᴇ ᴄʟɪᴄᴋ ᴏɴ ᴠᴇʀɪғʏ ʙᴜᴛᴛᴏɴ & ɢᴇᴛ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇꜱꜱ ғᴏʀ ᴛɪʟʟ ɴᴇxᴛ {DEENDAYAL_VERIFY_EXPIRE} ʜᴏᴜʀꜱ ✅</b>",
+                        text=f"<b>‼️ ʏᴏᴜʀ ᴛᴏᴋᴇɴ ɪs ᴇxᴘɪʀᴇᴅ ‼️\n\nᴋɪɴᴅʟʏ ɢᴇɴᴇʀᴀᴛᴇ ᴀ ɴᴇᴡ ᴛᴏᴋᴇɴ ᴀɴᴅ ɢᴇᴛ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇss.\n ᴠᴀʟɪᴅɪᴛʏ : {DEENDAYAL_VERIFY_EXPIRE} ʜᴏᴜʀꜱ</b>",
                         protect_content=False,
                         reply_markup=InlineKeyboardMarkup(btn)
                     )
@@ -520,12 +520,12 @@ async def start(client, message):
             else:
                if not await check_verification(client, message.from_user.id) and VERIFY == True:
                    btn = [[
-                       InlineKeyboardButton("♻️ ᴠᴇʀɪғʏ ♻️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id))
+                       InlineKeyboardButton("♻️ ɢᴇɴᴇᴛᴀᴛ ᴛᴏᴋᴇɴ ♻️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id))
                    ],[
-                        InlineKeyboardButton("⚡ Hᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ⚡", url=HOW_TO_VERIFY)
+                        InlineKeyboardButton("⚡ Hᴏᴡ ᴛᴏ ɢᴇɴᴇᴛᴀᴛ ᴛᴏᴋᴇɴ ⚡", url=HOW_TO_VERIFY)
                    ]]
                    l = await message.reply_text(
-                       text=f"<b>‼️ 𝐘𝐎𝐔 𝐀𝐑𝐄 𝐍𝐎𝐓 𝐕𝐄𝐑𝐈𝐅𝐈𝐄𝐃 𝐓𝐎𝐃𝐀𝐘 ‼️,\n\n ᴘʟᴇᴀꜱᴇ ᴄʟɪᴄᴋ ᴏɴ ᴠᴇʀɪғʏ ʙᴜᴛᴛᴏɴ & ɢᴇᴛ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇꜱꜱ ғᴏʀ ᴛɪʟʟ ɴᴇxᴛ {DEENDAYAL_VERIFY_EXPIRE} ʜᴏᴜʀꜱ ✅</b>",
+                       text=f"<b>‼️ ʏᴏᴜʀ ᴛᴏᴋᴇɴ ɪs ᴇxᴘɪʀᴇᴅ ‼️\n\n ᴋɪɴᴅʟʏ ɢᴇɴᴇʀᴀᴛᴇ ᴀ ɴᴇᴡ ᴛᴏᴋᴇɴ ᴀɴᴅ ɢᴇᴛ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇss.\n\nᴠᴀʟɪᴅɪᴛʏ : {DEENDAYAL_VERIFY_EXPIRE} ʜᴏᴜʀꜱ</b>",
                        protect_content=False,
                        reply_markup=InlineKeyboardMarkup(btn)
                    )
@@ -597,12 +597,12 @@ async def start(client, message):
     else:
         if not await check_verification(client, message.from_user.id) and VERIFY == True:
             btn = [[
-              InlineKeyboardButton("♻️ ᴠᴇʀɪғʏ ♻️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id))
+              InlineKeyboardButton("♻️ ɢᴇɴᴇᴛᴀᴛ ᴛᴏᴋᴇɴ ♻️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id))
            ],[
-              InlineKeyboardButton("⚡ Hᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ⚡", url=HOW_TO_VERIFY)
+              InlineKeyboardButton("⚡ Hᴏᴡ ᴛᴏ ɢᴇɴᴇᴛᴀᴛ ᴛᴏᴋᴇɴ ⚡", url=HOW_TO_VERIFY)
            ]]
             l = await message.reply_text(
-                text=f"<b>‼️ 𝐘𝐎𝐔 𝐀𝐑𝐄 𝐍𝐎𝐓 𝐕𝐄𝐑𝐈𝐅𝐈𝐄𝐃 𝐓𝐎𝐃𝐀𝐘 ‼️,\n\n ᴘʟᴇᴀꜱᴇ ᴄʟɪᴄᴋ ᴏɴ ᴠᴇʀɪғʏ ʙᴜᴛᴛᴏɴ & ɢᴇᴛ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇꜱꜱ ғᴏʀ ᴛɪʟʟ ɴᴇxᴛ {DEENDAYAL_VERIFY_EXPIRE} ʜᴏᴜʀꜱ ✅</b>",
+                text=f"<b>‼️ ʏᴏᴜʀ ᴛᴏᴋᴇɴ ɪs ᴇxᴘɪʀᴇᴅ ‼️\n\n ᴋɪɴᴅʟʏ ɢᴇɴᴇʀᴀᴛᴇ ᴀ ɴᴇᴡ ᴛᴏᴋᴇɴ ᴀɴᴅ ɢᴇᴛ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇss.\nᴠᴀʟɪᴅɪᴛʏ : {DEENDAYAL_VERIFY_EXPIRE} ʜᴏᴜʀꜱ</b>",
                 protect_content=False,
                 reply_markup=InlineKeyboardMarkup(btn)
             )
