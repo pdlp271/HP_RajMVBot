@@ -331,7 +331,7 @@ async def start(client, message):
             ]]
             await message.reply_photo(
                 photo="https://graph.org/file/c4cdc2d3524f6ef9df5ee-89c662967238373dcb.jpg",
-                caption=f"<b>👋 Hey {message.from_user.mention},\n\n✅ ʏᴏᴜʀ ɴᴇᴡ ᴛᴏᴋᴇɴ ɪs sᴜᴄᴄᴇssғᴜʟʟʏ ɢᴇɴᴇʀᴀᴛᴇᴅ.✅ \n Nᴏᴡ ʏᴏᴜ ᴄᴀɴ ᴜsᴇ ᴍᴇ ɪɴ ᴛʜᴇ ɴᴇxᴛ {DEENDAYAL_VERIFY_EXPIRE} ʜᴏᴜʀs.\n ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ʀᴇᴍᴏᴠᴇ ᴛᴏᴋᴇɴ ɢᴇɴᴇʀᴀᴛɪɴɢ ?. ᴋɪɴᴅʟʏ ʙᴜʏ ᴛʜᴇ ᴘʀᴇᴍɪᴜᴍ : /plan </b>",
+                caption=f"<b>👋 Hey {message.from_user.mention},\n\n✅ ʏᴏᴜʀ ɴᴇᴡ ᴛᴏᴋᴇɴ ɪs sᴜᴄᴄᴇssғᴜʟʟʏ ɢᴇɴᴇʀᴀᴛᴇᴅ.✅ \n\n Nᴏᴡ ʏᴏᴜ ᴄᴀɴ ᴜsᴇ ᴍᴇ ɪɴ ᴛʜᴇ ɴᴇxᴛ {DEENDAYAL_VERIFY_EXPIRE} ʜᴏᴜʀs.\n\n ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ʀᴇᴍᴏᴠᴇ ᴛᴏᴋᴇɴ ɢᴇɴᴇʀᴀᴛɪɴɢ ?. ᴋɪɴᴅʟʏ ʙᴜʏ ᴛʜᴇ ᴘʀᴇᴍɪᴜᴍ : /plan </b>",
                 reply_markup=InlineKeyboardMarkup(btn)
             )
             await verify_user(client, userid, token) 
@@ -525,7 +525,7 @@ async def start(client, message):
                         InlineKeyboardButton("⚡ Hᴏᴡ ᴛᴏ ɢᴇɴᴇᴛᴀᴛ ᴛᴏᴋᴇɴ ⚡", url=HOW_TO_VERIFY)
                    ]]
                    l = await message.reply_text(
-                       text=f"<b>‼️ ʏᴏᴜʀ ᴛᴏᴋᴇɴ ɪs ᴇxᴘɪʀᴇᴅ ‼️\n\n ᴋɪɴᴅʟʏ ɢᴇɴᴇʀᴀᴛᴇ ᴀ ɴᴇᴡ ᴛᴏᴋᴇɴ ᴀɴᴅ ɢᴇᴛ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇss.\n\nᴠᴀʟɪᴅɪᴛʏ : {DEENDAYAL_VERIFY_EXPIRE} ʜᴏᴜʀꜱ</b>",
+                       text=f"<b>‼️ ʏᴏᴜʀ ᴛᴏᴋᴇɴ ɪs ᴇxᴘɪʀᴇᴅ ‼️\n\n ᴋɪɴᴅʟʏ ɢᴇɴᴇʀᴀᴛᴇ ᴀ ɴᴇᴡ ᴛᴏᴋᴇɴ ᴀɴᴅ ɢᴇᴛ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇss.\nᴠᴀʟɪᴅɪᴛʏ : {DEENDAYAL_VERIFY_EXPIRE} ʜᴏᴜʀꜱ</b>",
                        protect_content=False,
                        reply_markup=InlineKeyboardMarkup(btn)
                    )
