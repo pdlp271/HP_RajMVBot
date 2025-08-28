@@ -280,7 +280,7 @@ async def send_msg(bot, filename, caption):
 
         filename = re.sub(r"[\(\)\[\]\{\}:;'\-!]", "", filename)
 
-        text = "#𝑵𝒆𝒘_𝑭𝒊𝒍𝒆_𝑨𝒅𝒅𝒆𝒅 ✅\n\n📑 ᴛɪᴛᴇʟ : `{}`\n🌳 Qᴜᴀʟɪᴛʏ : {}\n🍁 ʟᴀɴɢᴜᴀɢᴇ : {} \n⚡ ᴩᴏᴡᴇʀᴇᴅ ʙʏ : @HP_Raj_MOVIES\n\n🎥 MOVIE LINK :  <a href='https://t.me/{temp.U_NAME}?start=getfile-{filenames}'>👉𝐂𝐋𝐈𝐂𝐊 𝐇𝐄𝐑𝐄👈</a>"
+        text = "#𝐍𝐄𝐖_𝐅𝐈𝐋𝐄𝐒_𝐀𝐃𝐃𝐄𝐃 ✅\n\n📑 ᴛɪᴛᴇʟ : `{}`\n🌳 Qᴜᴀʟɪᴛʏ : {}\n🍁 ʟᴀɴɢᴜᴀɢᴇ : {} \n\n⚡ ᴩᴏᴡᴇʀᴇᴅ ʙʏ : @HP_Raj_MOVIES"
         text = text.format(filename, quality, language)
 
         if await add_name(OWNERID, filename):
