@@ -280,7 +280,7 @@ async def send_msg(bot, filename, caption):
 
         filename = re.sub(r"[\(\)\[\]\{\}:;'\-!]", "", filename)
 
-        text = "#𝐍𝐄𝐖_𝐅𝐈𝐋𝐄𝐒_𝐀𝐃𝐃𝐄𝐃 ✅\n\n📑 ᴛɪᴛʟᴇ : `{}`\n💢 Qᴜᴀʟɪᴛʏ : {}\n🍁 ʟᴀɴɢᴜᴀɢᴇ : {}\n⚡ ᴩᴏᴡᴇʀᴇᴅ ʙʏ : @HP_Raj_MOVIES\n\n♻️ Link : 𝐂𝐥𝐢𝐜𝐤 𝐇𝐞𝐫𝐞"
+        text = "#𝐍𝐄𝐖_𝐅𝐈𝐋𝐄𝐒_𝐀𝐃𝐃𝐄𝐃 ✅\n\n📑 ᴛɪᴛʟᴇ : `{}`\n💢 Qᴜᴀʟɪᴛʏ : {}\n🍁 ʟᴀɴɢᴜᴀɢᴇ : {}\n⚡ ᴩᴏᴡᴇʀᴇᴅ ʙʏ : @HP_Raj_MOVIES\n\n♻️ Movie Link : <a href='https://t.me/{temp.U_NAME}?start=getfile-{filenames}'>👉𝐂𝐥𝐢𝐜𝐤 𝐇𝐞𝐫𝐞👈</a>"
         text = text.format(filename, quality, language)
 
         if await add_name(OWNERID, filename):
@@ -293,7 +293,7 @@ async def send_msg(bot, filename, caption):
                     resized_poster = await fetch_image(poster_url)  
 
             filenames = filename.replace(" ", '-')
-            btn = [[InlineKeyboardButton('🌲 Get Files 🌲', url=f"https://telegram.me/{temp.U_NAME}?start=getfile-{filenames}")]]
+            btn = [[InlineKeyboardButton('♻️ ɢᴇᴛ ꜰɪʟᴇꜱ ♻️', url=f"https://t.me/{temp.U_NAME}?start=getfile-{filenames}")]]
             
             if resized_poster:
                 await bot.send_photo(chat_id=DEENDAYAL_MOVIE_UPDATE_CHANNEL, photo=resized_poster, caption=text, reply_markup=InlineKeyboardMarkup(btn))
