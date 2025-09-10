@@ -440,7 +440,7 @@ async def start(client, message):
             else:
                 if not await check_verification(client, message.from_user.id) and VERIFY == True:
                     btn = [[
-                       InlineKeyboardButton("♻️ ɢᴇɴᴇᴛᴀᴛ ᴛᴏᴋᴇɴ ♻️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id))
+                       InlineKeyboardButton("♻️ ɢᴇɴᴇᴛᴀᴛᴇ ᴛᴏᴋᴇɴ ♻️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id))
                        ],[
                        InlineKeyboardButton("⚡ Hᴏᴡ ᴛᴏ ɢᴇɴᴇᴛᴀᴛ ᴛᴏᴋᴇɴ ⚡", url=HOW_TO_VERIFY)
                    ]]
@@ -520,7 +520,7 @@ async def start(client, message):
             else:
                if not await check_verification(client, message.from_user.id) and VERIFY == True:
                    btn = [[
-                       InlineKeyboardButton("♻️ ɢᴇɴᴇᴛᴀᴛ ᴛᴏᴋᴇɴ ♻️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id))
+                       InlineKeyboardButton("♻️ ɢᴇɴᴇᴛᴀᴛᴇ ᴛᴏᴋᴇɴ ♻️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id))
                    ],[
                         InlineKeyboardButton("⚡ Hᴏᴡ ᴛᴏ ɢᴇɴᴇᴛᴀᴛ ᴛᴏᴋᴇɴ ⚡", url=HOW_TO_VERIFY)
                    ]]
@@ -597,7 +597,7 @@ async def start(client, message):
     else:
         if not await check_verification(client, message.from_user.id) and VERIFY == True:
             btn = [[
-              InlineKeyboardButton("♻️ ɢᴇɴᴇᴛᴀᴛ ᴛᴏᴋᴇɴ ♻️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id))
+              InlineKeyboardButton("♻️ ɢᴇɴᴇᴛᴀᴛᴇ ᴛᴏᴋᴇɴ ♻️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id))
            ],[
               InlineKeyboardButton("⚡ Hᴏᴡ ᴛᴏ ɢᴇɴᴇᴛᴀᴛ ᴛᴏᴋᴇɴ ⚡", url=HOW_TO_VERIFY)
            ]]
